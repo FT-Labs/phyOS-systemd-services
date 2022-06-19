@@ -1,0 +1,7 @@
+[Unit]
+Description=Play USB sound
+
+[Service]
+Type=oneshot
+Environment="XDG_RUNTIME_DIR=/run/user/1000"
+ExecStart=/usr/bin/ffplay -nodisp -autoexit /usr/share/phyos/sounds/disconnect.mp3
