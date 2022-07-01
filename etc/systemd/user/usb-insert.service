@@ -1,7 +1,9 @@
 [Unit]
-Description=Play USB sound
+Description=Play USB Connect Sound
 
 [Service]
 Type=oneshot
-Environment="XDG_RUNTIME_DIR=/run/user/1000"
 ExecStart=/usr/bin/aplay /usr/share/phyos/sounds/connect.wav
+
+[Install]
+WantedBy=default.target
