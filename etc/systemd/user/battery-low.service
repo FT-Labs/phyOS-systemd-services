@@ -3,7 +3,7 @@ Description=Plays When Battery Low
 
 [Service]
 Type=oneshot
-ExecStart=/usr/bin/aplay /usr/share/phyos/sounds/battery-low.wav
+ExecStart=/usr/bin/aplay -D pulse /usr/share/phyos/sounds/battery-low.wav
 
 [Install]
 WantedBy=default.target

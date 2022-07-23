@@ -3,7 +3,7 @@ Description=Play USB Connect Sound
 
 [Service]
 Type=oneshot
-ExecStart=/usr/bin/aplay /usr/share/phyos/sounds/connect.wav
+ExecStart=/usr/bin/aplay -D pulse /usr/share/phyos/sounds/connect.wav
 
 [Install]
 WantedBy=default.target

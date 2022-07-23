@@ -3,7 +3,7 @@ Description=Play USB Disconnect Sound
 
 [Service]
 Type=oneshot
-ExecStart=/usr/bin/aplay /usr/share/phyos/sounds/disconnect.wav
+ExecStart=/usr/bin/aplay -D pulse /usr/share/phyos/sounds/disconnect.wav
 
 [Install]
 WantedBy=default.target
