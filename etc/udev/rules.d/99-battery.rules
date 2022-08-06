@@ -1,2 +1,2 @@
-ACTION=="change", SUBSYSTEM=="power_supply", ENV{POWER_SUPPLY_NAME}="AC0", ENV{POWER_SUPPLY_ONLINE}=="1", RUN+="/bin/sh -c 'echo 1 > /tmp/acstat'", RUN+="/bin/pkill -RTMIN+3 dwmblocks"
+ACTION=="change", SUBSYSTEM=="power_supply", ENV{POWER_SUPPLY_NAME}="AC0", ENV{POWER_SUPPLY_ONLINE}=="1", RUN+="/bin/sh -c '[[ $(cat /tmp/acstat) != '1' ]] && echo 1 > /tmp/acstat'", RUN+="/bin/pkill -RTMIN+3 dwmblocks"
 ACTION=="change", SUBSYSTEM=="power_supply", ENV{POWER_SUPPLY_NAME}="AC0", ENV{POWER_SUPPLY_ONLINE}=="0", RUN+="/bin/sh -c 'echo 0 > /tmp/acstat'", RUN+="/bin/pkill -RTMIN+3 dwmblocks"
