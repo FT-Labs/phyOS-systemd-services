@@ -1,1 +1,1 @@
-ACTION=="change", SUBSYSTEM=="power_supply", ENV{POWER_SUPPLY_ONLINE}=="1", RUN+="/bin/touch /tmp/acstat", RUN+="/bin/pkill -RTMIN+3 dwmblocks", RUN+="/bin/sleep 0.2", RUN+="/bin/rm /tmp/acstat"
+ACTION=="change", SUBSYSTEM=="power_supply", ENV{POWER_SUPPLY_NAME}="AC0", ENV{POWER_SUPPLY_ONLINE}=="1", RUN+="/bin/touch /tmp/acstat", RUN+="/bin/pkill -RTMIN+3 dwmblocks", RUN+="/bin/sleep 0.2", RUN+="/bin/rm /tmp/acstat"
