@@ -1,0 +1,1 @@
+ACTION=="add", SUBSYSTEM=="input", KERNEL=="*:1.0", TAG+="systemd", ENV{SYSTEMD_USER_WANTS}="kbd-insert.service"

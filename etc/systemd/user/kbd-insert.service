@@ -1,0 +1,9 @@
+[Unit]
+Description=Change keybinds on keyboard plug
+
+[Service]
+Type=oneshot
+ExecStart=/usr/share/phyos/util-scripts/pOS-remaps
+
+[Install]
+WantedBy=default.target
